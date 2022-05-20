@@ -19,154 +19,390 @@
     </header>
 
 
+		<section class="slide" id="cover">
+			<h2>Git commit, Merge request, Automatization</h2>
+			<figure>
+				<img
+					class="cover"
+					src="pictures/cover.jpg"
+					alt="Hands on the orange typewriter in a park"
+				/>
+				<figcaption class="copyright right white">
+					<a href="https://fiftyfootshadows.net">© John Carey</a>
+				</figcaption>
+			</figure>
+			<style>
+				#cover h2 {
+					margin: 23px 0 0;
+					color: white;
+					text-align: center;
+					font-size: 70px;
+				}
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
+				#cover p {
+					margin: 10px 0 0;
+					text-align: center;
+					color: white;
+					font-style: italic;
+					font-size: 20px;
+				}
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+				#cover p a {
+					color: white;
+				}
+			</style>
+		</section>
 
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
+		<section class="slide">
+			<h2>Структура коммита от Angular</h2>
+			<pre>
+                <code class="next">&lt;type&gt;(&lt;optional scope&gt;): &lt;subject&gt;</code>
+                <code class="next comment">empty separator line</code>
+                <code class="next">&lt;optional body&gt;</code>
+                <code class="next comment">empty separator line</code>
+                <code class="next">&lt;optional footer&gt;</code>
+            </pre>
+		</section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
+		<section class="slide">
+			<h2>Приемущества от использования</h2>
+			<ul>
+				<li>
+					Упростит людям участие в проектах, позволив им изучить более структурированную
+					историю коммитов
+				</li>
+				<li>Можно создавать changelog/release notes автоматически</li>
+				<li>Наличие типов заставляет думать об атомарности коммитов</li>
+				<li>Автоматическое определение семантического повышения версии</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
+		<section class="slide">
+			<h2 class="shout grow">Типы</h2>
+		</section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
+		<section class="slide">
+			<h2>Изменения, относящиеся к API</h2>
+			<ol lang="ru">
+				<li value="1">feat - добавление нового функционала</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/1c066c55a5c83bed6a0561e78dea5ad64fd37163"
+						>feat(radio): added default example</a
+					></code
+				>
+				<li>fix - испрвление бага</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/4e819da1029f77326679da499a84e415802995c1"
+						>fix(press): skip press for contentediable element</a
+					></code
+				>
+			</ol>
+		</section>
+		<section class="slide">
+			<ol>
+				<li value="3/4" style="line-height: 1.5em">
+					refactor/perf - реструктуризация кода,<br />
+					не меняющая никакого поведения
+				</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/f813bf95b7043a681101312e35a44c2e7f95becb"
+						>refactor: move tabbable to if condition</a
+					></code
+				>
+				<li value="5">style - изменение в стиле кода</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/025b2dab52d5f6ee94fa49116472adcaff65145d"
+						>style: update code style by prettier</a
+					></code
+				>
+				<li value="6">docs - изменения документации</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/d563187ff0d3c6796fb8c5b430beafd6618931cd"
+						>docs: update readme links</a
+					></code
+				>
+				<li value="7">test - изменение тестов</li>
+				<code
+					><a
+						href="https://github.com/use-platform/use-platform/commit/33aba9120d47c96ec7f6666814ddbc1b26fe505f"
+						>test(datetimefield): update tests</a
+					></code
+				>
+			</ol>
+		</section>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+		<section class="slide">
+			<ul>
+				<li value="8">
+					build - Коммиты, которые влияют на компоненты сборки, такие как инструмент
+					сборки, ci pipeline, зависимости, версия проекта...
+				</li>
+				<code
+					><a
+						href="https://github.com/angular/angular/commit/44890437aefe2523fa64af474196830d45b1d0ce"
+						>build: update to yarn v1.22.17 (#44150)</a
+					></code
+				>
+				<li value="9">
+					ops - которые влияют на операционные компоненты, такие как инфраструктура,
+					развертывание, резервное копирование, восстановление...
+				</li>
+				<li value="10">revert - откат на предыдущие коммиты</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2 class="shout grow">СHORE</h2>
+		</section>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
+		<section class="slide">
+			<h2>
+				<a
+					href="https://github.com/angular/angular/blob/main/CONTRIBUTING.md#:~:text=see%20DEVELOPER.md.-,Commit%20Message%20Format,-This%20specification%20is"
+					>Дополнить Angular</a
+				>
+			</h2>
+			<img
+				class="cover"
+				src="./pictures/Снимок экрана 2022-05-09 221814.png"
+				alt=""
+				style="top: 60%"
+			/>
+		</section>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+		<section class="slide">
+			<h2>
+				<a
+					href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#"
+					>Дополнить Angular в 2011</a
+				>
+			</h2>
+			<img class="cover" src="./pictures/massage_convineon.png" alt="" style="top: 60%" />
+		</section>
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
+		<section class="slide">
+			<blockquote>
+				<p>Other changes that don't modify src or test files</p>
+			</blockquote>
+			<blockquote>
+				<p>
+					Changes to the building process or auxiliary tools and libraries such as
+					documentation generation
+				</p>
+			</blockquote>
+		</section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+		<section class="slide">
+			<ol>
+				<li>
+					Файды конфигурации: jest.config.js, tsconfig.json, .gitignore и т.д (<a
+						href="https://github.com/use-platform/use-platform"
+						>use-platform</a
+					>)
+				</li>
+				<li>Обновление пакетов</li>
+				<li>
+					Мелкие правки документации (<a
+						href="https://github.com/octokit/octokit.js/commit/d60979b4ce87ae497e62f9a3d0b682184ee28672"
+						>octokit.js</a
+					>)
+				</li>
+				<li>Изменение CHANGELOG</li>
+				<li>Обновление шаблона ошибок</li>
+			</ol>
+		</section>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
+		<section class="slide">
+			<h2>Рецепт фронтендера</h2>
+			<ul>
+				<li><mark>fix</mark></li>
+				<li><mark>feat</mark></li>
+				<li><mark>chore</mark></li>
+				<li>docs</li>
+				<li>refactor</li>
+			</ul>
+			<p class="note"><mark>95% коммитов</mark></p>
+		</section>
+		<section class="slide">
+			<h2 class="shout grow">Контекст</h2>
+		</section>
+		<section class="slide" id="scope">
+			<h2>&lt;type&gt;(<mark>&lt;optional scope&gt;</mark>): &lt;description&gt;</h2>
+
+			<ul>
+				<li class="next">отражает контекст изменений (где?)</li>
+				<li class="next">операционный элемент</li>
+				<li class="next">нет регламентированого списка областей</li>
+				<li class="next">
+					эту информацию можно понять из просмотра изменений коммита, но это медленно
+				</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Пример</h2>
+			<img src="./pictures/scopes/doc_bad.jpg" alt="" />
+			<img src="./pictures/scopes/doc_typo.jpg" alt="" />
+			<img src="./pictures/scopes/doc_re.jpg" alt="" />
+			<img src="./pictures/scopes/doc_ctrb.jpg" alt="" />
+		</section>
+		<section class="slide">
+			<h2>Пример 2</h2>
+			<img src="./pictures/scopes/doc_fix.jpg" alt="" />
+			<img src="./pictures/scopes/doc_import.jpg" alt="" />
+		</section>
+		<section class="slide">
+			<h2>Часто встречаются</h2>
+			<p>Конктеный файл:</p>
+			<ul>
+				<li>gulpfile.js</li>
+				<li>.eslintrcs</li>
+				<li>config.js</li>
+				<li>README</li>
+				<li>LICENSE</li>
+				<li>ci</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Часто встречаются</h2>
+			<p>Директория включающей все изменяемые файлы:</p>
+			<ul>
+				<li>parser</li>
+				<li>images</li>
+				<li>types</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Часто встречаются</h2>
+			<p>Логическая область:</p>
+			<ul>
+				<li>analytiсs</li>
+				<li>git</li>
+				<li>devtools</li>
+				<li>deps, deps-dev</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Области зависят от конкретного проекта</h2>
+			<pre><code style="font-size: 14px;">&lt;type&gt;(&lt;scope&gt;): &lt;short summary&gt;
+  │       │             │
+  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │       │
+  │       └─⫸ Commit Scope: animations|bazel|benchpress|common|compiler|compiler-cli|core|
+  │                          elements|forms|http|language-service|localize|platform-browser|
+  │                          platform-browser-dynamic|platform-server|router|service-worker|
+  │                          upgrade|zone.js|packaging|changelog|docs-infra|migrations|ngcc|ve|
+  │                          devtools
+  │
+  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+		</code></pre>
+		</section>
+		<section class="slide">
+			<h2>Рецепт фронтендера №2</h2>
+
+			<p>
+				- Подумать какое слово лучше всего отразит контекст изменений <br />
+				<em style="font-size: 16px"
+					>Помошники: насмотренность, понимание струтуры проекта, опыт, фантазия</em
+				><br />
+				- Если не уверен что писать, лучше ничего не писать <br />
+				- Если большой, серьезный проект - о списке областей надо договориться<br />
+			</p>
+		</section>
+		<section class="slide">
+			<h2>Псомотреть примеры</h2>
+			<ul>
+				<li>https://github.com/angular/angular</li>
+				<li>https://github.com/yargs/yargs</li>
+				<li>https://gitlab.com/dmfay/massive-js</li>
+				<li>https://github.com/conventional-changelog/conventional-changelog</li>
+				<li>https://github.com/lerna/lerna</li>
+				<li>https://github.com/stenin-nikita/bem-react-core</li>
+				<li>
+					<a
+						href="https://www.conventionalcommits.org/en/about/#:~:text=Projects%20Using%20Conventional%20Commits"
+						>И ДРУГИЕ</a
+					>
+				</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2 class="shout grow">
+				Краткое <br />
+				Описание
+			</h2>
+		</section>
+		<section class="slide">
+			<h2>Как писать</h2>
+			<pre><code style="font-size: 16px;">&lt;type&gt;(&lt;scope&gt;):<mark> </mark>&lt;short summary&gt;
+                        │
+                        └─⫸ <mark> Summary in present tense. Not capitalized.</mark>
+                             <mark>No period at the end. 72 simbol max</mark>
+		</code></pre>
+			<ul class="next">
+				<li>обновить пакеты</li>
+				<li>удалить лишние пробелы</li>
+				<li>изменить пути картинок</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Что писать</h2>
+			<p>
+				Отражаем суть изменений коммита. Одно логичкески завершенное изменение - один коммит
+				(Single Responsibility). Не получается коротко описать - скорей всего нарушен
+				принцип едиственной ответственности
+			</p>
+			<p>Больше глаголов. Избегаем прилагательные</p>
+			<p>Не пишем зачем, где и почему именно так</p>
+		</section>
+		<section class="slide">
+			<h2 class="shout">Тело</h2>
+		</section>
+		<section class="slide">
+			<h2>Что писать</h2>
+			<p>
+				Тело коммита может быть использовано для детализации изменений. В теле нужно
+				сфокусируйтесь на объяснении причин изменений — на том, как всё работало до
+				изменений и что здесь было не так, и на том, как оно работает сейчас.
+			</p>
+		</section>
+		<section class="slide">
+			<h2 class="shout">Сноска</h2>
+		</section>
+		<section class="slide">
+			<h2>Место для указания задачи</h2>
+			<p>
+				Каждая сноска должна состоять из токена, за которым следует разделитель, за которым
+				следует строковое значение (основаное на git trailer format).
+			</p>
+			<p>Разделители</p>
+			<code>:&lt;space&gt;</code> либо <code>&lt;space&gt;#</code>
+		</section>
+		<section class="slide">
+			<h2>Место для указания задачи</h2>
+			<code>Refs #GFOEJGK-59</code><br />
+			<code>Refs #GFOEJGK-59, #GFOEJGK-60</code><br />
+			<code>Refs: #GFOEJGK-59, #GFOEJGK-60</code><br />
+			<code>Refs: GFOEJGK-59</code><br />
+			<code>Refs: GFOEJGK-59, GFOEJGK-60</code><br />
+			<code>Closes #GFOEJGK-59</code><br />
+		</section>
+		<section class="slide">
+			<h2 class="shout">20/80</h2>
+		</section>
+		<section class="slide">
+			<h2>Резюмируя</h2>
+			<ul>
+				<li>Осознаность превыше всего</li>
+			</ul>
+		</section>
+		<section class="slide black">
+			<h2 class="shout shrink">The End</h2>
+		</section>
 
     <footer class="badge">
         <a href="https://github.com/shower/shower">Fork me on GitHub</a>
