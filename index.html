@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
-</head>
-<body class="shower list">
-
-    <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
-    </header>
-
+	<head>
+		<title>Shower Presentation Engine</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/@shower/ribbon/styles/styles.css"
+		/>
+		<style>
+			.shower {
+				--slide-ratio: calc(16 / 9);
+			}
+		</style>
+	</head>
+	<body class="shower list">
+		<header class="caption">
+			<h1>Shower Presentation Engine</h1>
+			<p>Yours Truly, Famous Inc.</p>
+		</header>
 
 		<section class="slide" id="cover">
 			<h2>Git commit, Merge request, Automatization</h2>
@@ -54,6 +58,21 @@
 		</section>
 
 		<section class="slide">
+			<h2>Содержание</h2>
+			<ul>
+				<li>Часть 1. Как писать коммит</li>
+				<li>Часть 2. Как ускорить процесс</li>
+				<li>Часть 3. Как писать MR</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2 class="shout grow">Структура коммита</h2>
+			<figure>
+				<figcaption class="copyright top black">Часть 1</figcaption>
+			</figure>
+		</section>
+		<section class="slide">
 			<h2>Структура коммита от Angular</h2>
 			<pre>
                 <code class="next">&lt;type&gt;(&lt;optional scope&gt;): &lt;subject&gt;</code>
@@ -68,12 +87,14 @@
 			<h2>Приемущества от использования</h2>
 			<ul>
 				<li>
-					Упростит людям участие в проектах, позволив им изучить более структурированную
-					историю коммитов
+					Упростит людям участие в проектах, позволив им изучить более
+					структурированную историю коммитов
 				</li>
 				<li>Можно создавать changelog/release notes автоматически</li>
 				<li>Наличие типов заставляет думать об атомарности коммитов</li>
-				<li>Автоматическое определение семантического повышения версии</li>
+				<li>
+					Автоматическое определение семантического повышения версии
+				</li>
 			</ul>
 		</section>
 
@@ -139,8 +160,9 @@
 		<section class="slide">
 			<ul>
 				<li value="8">
-					build - Коммиты, которые влияют на компоненты сборки, такие как инструмент
-					сборки, ci pipeline, зависимости, версия проекта...
+					build - Коммиты, которые влияют на компоненты сборки, такие
+					как инструмент сборки, ci pipeline, зависимости, версия
+					проекта...
 				</li>
 				<code
 					><a
@@ -149,8 +171,9 @@
 					></code
 				>
 				<li value="9">
-					ops - которые влияют на операционные компоненты, такие как инфраструктура,
-					развертывание, резервное копирование, восстановление...
+					ops - которые влияют на операционные компоненты, такие как
+					инфраструктура, развертывание, резервное копирование,
+					восстановление...
 				</li>
 				<li value="10">revert - откат на предыдущие коммиты</li>
 			</ul>
@@ -181,7 +204,12 @@
 					>Дополнить Angular в 2011</a
 				>
 			</h2>
-			<img class="cover" src="./pictures/massage_convineon.png" alt="" style="top: 60%" />
+			<img
+				class="cover"
+				src="./pictures/massage_convineon.png"
+				alt=""
+				style="top: 60%"
+			/>
 		</section>
 
 		<section class="slide">
@@ -190,8 +218,8 @@
 			</blockquote>
 			<blockquote>
 				<p>
-					Changes to the building process or auxiliary tools and libraries such as
-					documentation generation
+					Changes to the building process or auxiliary tools and
+					libraries such as documentation generation
 				</p>
 			</blockquote>
 		</section>
@@ -199,7 +227,8 @@
 		<section class="slide">
 			<ol>
 				<li>
-					Файды конфигурации: jest.config.js, tsconfig.json, .gitignore и т.д (<a
+					Файды конфигурации: jest.config.js, tsconfig.json,
+					.gitignore и т.д (<a
 						href="https://github.com/use-platform/use-platform"
 						>use-platform</a
 					>)
@@ -231,14 +260,18 @@
 			<h2 class="shout grow">Контекст</h2>
 		</section>
 		<section class="slide" id="scope">
-			<h2>&lt;type&gt;(<mark>&lt;optional scope&gt;</mark>): &lt;description&gt;</h2>
+			<h2>
+				&lt;type&gt;(<mark>&lt;optional scope&gt;</mark>):
+				&lt;description&gt;
+			</h2>
 
 			<ul>
 				<li class="next">отражает контекст изменений (где?)</li>
 				<li class="next">операционный элемент</li>
 				<li class="next">нет регламентированого списка областей</li>
 				<li class="next">
-					эту информацию можно понять из просмотра изменений коммита, но это медленно
+					эту информацию можно понять из просмотра изменений коммита,
+					но это медленно
 				</li>
 			</ul>
 		</section>
@@ -305,12 +338,15 @@
 			<h2>Рецепт фронтендера №2</h2>
 
 			<p>
-				- Подумать какое слово лучше всего отразит контекст изменений <br />
+				- Подумать какое слово лучше всего отразит контекст изменений
+				<br />
 				<em style="font-size: 16px"
-					>Помошники: насмотренность, понимание струтуры проекта, опыт, фантазия</em
+					>Помошники: насмотренность, понимание струтуры проекта,
+					опыт, фантазия</em
 				><br />
 				- Если не уверен что писать, лучше ничего не писать <br />
-				- Если большой, серьезный проект - о списке областей надо договориться<br />
+				- Если большой, серьезный проект - о списке областей надо
+				договориться<br />
 			</p>
 		</section>
 		<section class="slide">
@@ -319,7 +355,9 @@
 				<li>https://github.com/angular/angular</li>
 				<li>https://github.com/yargs/yargs</li>
 				<li>https://gitlab.com/dmfay/massive-js</li>
-				<li>https://github.com/conventional-changelog/conventional-changelog</li>
+				<li>
+					https://github.com/conventional-changelog/conventional-changelog
+				</li>
 				<li>https://github.com/lerna/lerna</li>
 				<li>https://github.com/stenin-nikita/bem-react-core</li>
 				<li>
@@ -352,9 +390,10 @@
 		<section class="slide">
 			<h2>Что писать</h2>
 			<p>
-				Отражаем суть изменений коммита. Одно логичкески завершенное изменение - один коммит
-				(Single Responsibility). Не получается коротко описать - скорей всего нарушен
-				принцип едиственной ответственности
+				Отражаем суть изменений коммита. Одно логичкески завершенное
+				изменение - один коммит (Single Responsibility). Не получается
+				коротко описать - скорей всего нарушен принцип едиственной
+				ответственности
 			</p>
 			<p>Больше глаголов. Избегаем прилагательные</p>
 			<p>Не пишем зачем, где и почему именно так</p>
@@ -365,9 +404,10 @@
 		<section class="slide">
 			<h2>Что писать</h2>
 			<p>
-				Тело коммита может быть использовано для детализации изменений. В теле нужно
-				сфокусируйтесь на объяснении причин изменений — на том, как всё работало до
-				изменений и что здесь было не так, и на том, как оно работает сейчас.
+				Тело коммита может быть использовано для детализации изменений.
+				В теле нужно сфокусируйтесь на объяснении причин изменений — на
+				том, как всё работало до изменений и что здесь было не так, и на
+				том, как оно работает сейчас.
 			</p>
 		</section>
 		<section class="slide">
@@ -376,8 +416,9 @@
 		<section class="slide">
 			<h2>Место для указания задачи</h2>
 			<p>
-				Каждая сноска должна состоять из токена, за которым следует разделитель, за которым
-				следует строковое значение (основаное на git trailer format).
+				Каждая сноска должна состоять из токена, за которым следует
+				разделитель, за которым следует строковое значение (основаное на
+				git trailer format).
 			</p>
 			<p>Разделители</p>
 			<code>:&lt;space&gt;</code> либо <code>&lt;space&gt;#</code>
@@ -396,22 +437,57 @@
 		</section>
 		<section class="slide">
 			<h2>Резюмируя</h2>
+			<ol>
+				<li>
+					Хорошые коммиты - самое эффективное средство для
+					долговременной поддержки проекта
+				</li>
+				<li>Используем типы обязательно, но упрощенную версию</li>
+				<li>Контекс используем, когда уверены что он поможет</li>
+				<li>
+					Чувствуем важность изменений. Описываем узменения подробно
+				</li>
+				<li>Коммитим часто, небольшими порциями</li>
+			</ol>
+		</section>
+		<section class="slide">
+			<h2 class="shout grow">Окружение</h2>
+			<figure>
+				<figcaption class="copyright top black">Часть 2</figcaption>
+			</figure>
+		</section>
+		<section class="slide">
+			<h2>
+				Как заставить <del>ленивого</del> разработчика <br />
+				коммитить часто
+			</h2>
 			<ul>
-				<li>Осознаность превыше всего</li>
+				<li>Настроить git</li>
+				<li>Автоматизировать</li>
 			</ul>
+		</section>
+		<section class="slide">
+			<h2>Alises для ускорения</h2>
+			у
+		</section>
+
+		<section class="slide">
+			<h2 class="shout grow">Merge Request</h2>
+			<figure>
+				<figcaption class="copyright top black">Часть 3</figcaption>
+			</figure>
 		</section>
 		<section class="slide black">
 			<h2 class="shout shrink">The End</h2>
 		</section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</footer>
 
-    <div class="progress"></div>
+		<div class="progress"></div>
 
-    <script src="node_modules/@shower/core/dist/shower.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
-</body>
+		<script src="node_modules/@shower/core/dist/shower.js"></script>
+		<!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+	</body>
 </html>
